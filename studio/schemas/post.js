@@ -4,6 +4,42 @@ export default {
     "title": "Post",
     "fields": [
         {
+            "name": "blockLayout",
+            "title": "Block Layout",
+            "type": "visualOptions",
+            "options": {
+              showTooltip: true,
+              optionSize: "small",
+              list: {
+                left: {
+                  name: "Text Left / Image Right",
+                  icon: OITextLeftOverlap,
+                  default: true,
+                },
+                right: {
+                  name: "Text Right / Image Left",
+                  icon: OITextRightOverlap,
+                },
+                top: {
+                  name: "Text Top / Image Bottom",
+                  icon: OITextTopOverlap,
+                },
+                bottom: {
+                  name: "Text Botom / Image Top",
+                  icon: OITextBottomOverlap,
+                },
+                notext: {
+                  name: "Image, No Text",
+                  icon: OIImage,
+                },
+                noimage: {
+                  name: "Text, No Image",
+                  icon: OIText,
+                },
+              },
+            },
+          },
+        {
             "type": "string",
             "name": "title",
             "title": "Title",
@@ -17,6 +53,11 @@ export default {
             "description": "The text shown just below the title or the featured image",
             "validation": null
         },
+        {
+            "type": 'tags',
+            "name": 'tags',
+            "title": 'Tags'
+          },
         {
             "type": "date",
             "name": "date",
@@ -42,6 +83,15 @@ export default {
             "description": "The excerpt of the post displayed in the blog feed",
             "validation": null
         },
+        {
+            "type": "rating", // Required
+            "name": "rating",
+            "title": "Rating",
+            "description": "Apply a rating out of 5 stars",
+            "options": {
+              "stars": 5, // Optional. Default 5.
+            }
+          },
         {
             "type": "image",
             "name": "image",

@@ -1,0 +1,16 @@
+{
+    "types": [
+      {
+        "type": "document",
+        "field": "date",
+        "titleField": "title"
+      }
+    ],
+    "calendar": {
+      "event": {
+        "dateFormat": "MMMM, dd yyyy",
+        "timeFormat": "hh:mm a",
+        "showAuthor": "true"
+      }
+    }
+  }
